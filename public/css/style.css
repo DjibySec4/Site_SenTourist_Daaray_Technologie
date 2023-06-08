@@ -1,0 +1,55 @@
+/* Couleur de base */
+:root
+{
+    --base-color : #1ce;
+    --base-black-color : #222;
+    --base-white-color : #fff;
+} 
+
+/* Grille de la page d'accueil */
+.grid-container 
+{
+    display: grid;
+    grid-template-areas: 
+        'menu menu menu menu menu menu'
+        'baniere baniere baniere baniere baniere baniere'
+        'region region region region region region'
+        'imageText imageText imageText textImage textImage textImage'
+        'president president president president president president'
+        'footer footer footer footer footer footer';
+        margin: 10px;
+}
+
+.grid-item-menu { grid-area: menu; }
+.grid-item-baniere { grid-area: baniere; }
+.grid-item-region { grid-area: region; }
+.grid-item-imageText { grid-area: imageText; }
+.grid-item-textImage { grid-area: textImage; }
+.grid-item-president { grid-area: president; }
+.grid-item-footer { grid-area: footer; }
+
+.grid-item
+{
+    padding: 12px;
+} 
+
+
+/* Stylisation de la baniere */
+header a 
+{
+    background : right / cover url("../images/vitrine/ImageBaniere.jfif");
+    display:flex;
+    justify-content:center;
+    height:250px;
+    align-items:center;
+    font:3em "Dacing Script", Fantasy;
+    color: var(--base-white-color);
+    text-decoration: overline;
+    text-shadow: 5px 3px 6px  var(--base-black-color);
+}
+
+header:hover 
+{
+    border: thin solid var(--base-black-color);
+    box-shadow : 3px 3px 3px var(--base-color); 
+}

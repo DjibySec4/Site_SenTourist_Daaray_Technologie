@@ -1,0 +1,158 @@
+/* Couleur de base */
+:root
+{
+    --base-color : #1ce;
+    --base-black-color : #222;
+    --base-white-color : #fff;
+} 
+
+/* menu part */
+.menu{
+    text-align: center;
+
+}
+
+.menu ul{
+    list-style: none;
+    
+}
+
+.menu ul li{
+    display: inline-block;
+    background: var(--base-black-color);
+    color: white;
+    padding: 15px 55px;
+    margin-left: -5px;
+    border-left: 1px solid black;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 18px;
+    position: relative;
+    font-weight: 600;
+    border-top: 5px solid var(--base-color);
+
+}
+
+.menu ul li a{
+    color: var(--base-white-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+    color: var(--base-black-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.menu ul li i{
+    position: relative;
+    right: 10px;
+    
+}
+.menu ul li:hover{
+    background-color: var(--base-color);
+    transition: .8s;
+    cursor: pointer;
+    color: var(--base-black-color);
+    font-size: 18px;
+    border-top: 5px solid var(--base-black-color);
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -ms-transition: .8s;
+    -o-transition: .8s;
+}
+
+/* dropdown menu part */
+
+
+
+.menu ul li .contact li:first-child:hover{background-color: royalblue;}
+.menu ul li .contact li:nth-child(2):hover{background-color: rgb(190, 201, 37);}
+.menu ul li .contact li:nth-child(3):hover{background-color: rgb(228, 22, 22);}
+.menu ul li .contact li:nth-child(4):hover{background-color: rgb(1, 130, 250);}
+.menu ul li .contact li:last-child:hover{background-color: rgb(66, 110, 241);}
+
+.menu ul li:hover  ul li{
+    visibility: visible;
+    opacity: 1;
+    transition: .8s;
+    transform: scaleY(1);
+    cursor: pointer;
+}
+
+/* portfolio part */
+.menu ul li .portfolio {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0;
+    margin-left: 5px;
+    pointer-events:none
+
+}
+.menu ul li .portfolio  li{
+    width: 84px;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scaley(0);
+    transform-origin:top;
+    pointer-events: all;
+}
+
+.menu ul li:hover .portfolio li{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleX(1);
+    transition: .8s;
+}
+.menu ul li .portfolio li ul {
+
+ 
+    visibility: hidden; 
+    opacity: 0;
+    margin-left: 0px;
+    transform: scaleX(0); 
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    padding: 5px;
+    height: 10px;
+    width: 100px;
+    transform-origin: center;
+
+}
+
+.menu ul li .portfolio li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: scaleX(1);
+    transition: .8s;
+
+}
+
+/* login part */
+.menu  ul li .login {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0;
+    margin-left: 4px;    
+}
+
+.menu ul li .login li{
+    width: 60px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scaley(0);
+    transform-origin: right;
+}
+
+.menu ul li:hover .login li{
+    visibility: visible;
+    opacity: 1;
+    transform: scaley(1);
+    transition: .8s;
+
+}
